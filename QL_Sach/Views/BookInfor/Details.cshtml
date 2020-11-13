@@ -1,0 +1,45 @@
+﻿@model BookInfor
+
+<div class="container">
+    <h3 class="display-4">Book details</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>@Model.Name</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-primary">
+                    <span class="label label-primary">By: </span>
+                    <span class="monospaced">@Model.Author</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="description">
+                        @Model.ShortContent
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <a class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+                        Read now
+                    </a>
+                </div>
+            </div>
+
+            <hr />
+
+            <ul class="list-group">
+                <li class="list-group-item"><span class="font-weight-bold">Category - </span> @Model.Category</li>
+                <li class="list-group-item"><span class="font-weight-bold">Publishing Year - </span> @Model.PublishYear</li>
+                <li class="list-group-item"><span class="font-weight-bold">Language - </span> @Model.Amount</li>
+            </ul>
+        </div>
+    </div>
+    </div>

@@ -1,0 +1,86 @@
+﻿@model BookInforCreateVM
+
+<form method="post" enctype="multipart/form-data">
+    <div class="border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-info">Add New Book</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="BookInfor.Name"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="BookInfor.Name" class="form-control" />
+                        <span asp-validation-for="BookInfor.Name" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="BookInfor.Author"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="BookInfor.Author" class="form-control" />
+                        <span asp-validation-for="BookInfor.Author" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="BookInfor.ShortContent"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="BookInfor.ShortContent" class="form-control"></textarea>
+                        <span asp-validation-for="BookInfor.ShortContent" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="BookInfor.PublishYear"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="BookInfor.PublishYear" class="form-control"></textarea>
+                        <span asp-validation-for="BookInfor.PublishYear" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="BookInfor.Amount"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="BookInfor.Amount" class="form-control"></textarea>
+                        <span asp-validation-for="BookInfor.Amount" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="BookInfor.CategoryId"></label>
+                    </div>
+                    <div class="col-8">
+                        <select asp-for="BookInfor.CategoryId" asp-items="@Model.CategoriesSelectList" class="form-control">
+                            <option disabled selected>Vui lòng chọn Category</option>
+                        </select>
+                        <span asp-validation-for="BookInfor.CategoryId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col">
+                        <input type="submit" value="Create" class="btn btn-info" />
+                    </div>
+                    <div class="col">
+                        <a asp-action="Index" class="btn btn-success">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
